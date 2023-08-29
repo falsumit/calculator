@@ -7,114 +7,69 @@
 
 * {
     font-family: 'Terminal', Helvetica, sans-serif;
-    color: whitesmoke;
+    color: white;
 }
 
 html {
     background-color: rgb(20, 20, 20);
-}
-
-head {
-    display: none;
-}
-
-div {
-    display: block;
-}
-
-h1 {
-    display: block;
-    font-size: 5rem;
-}
-
-h2 {
-    display: block;
-    font-size: 1.6rem;
-    letter-spacing: .1rem;
-}
-
-p, a {
-    font-size: 1.6rem;
-    line-height: normal;
+    margin: 20px;
+    overflow: hidden;
 }
 
 button {
-    background-color: rgb(44, 44, 44);
-    cursor: pointer;
-    text-align: center;
+    background-color: rgb(20, 20, 20);
     border: 0;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: rgb(44, 44, 44, 80%);
+    cursor: pointer;
 }
 
-div#page-container {
+#page-container {
     margin: 0 auto;
+    width: 320px;
+    background-color: rgb(40, 40, 40);
+    padding: 20px;
+    border-radius: 8px;
 }
 
-div#calc-container {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 10px;
+#calc-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 16px;
 }
 
-div#output {
-    width: 100%;
-    max-width: calc(980px + 10px + 80px);
-    background-color: black;
+#input-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 16px;
 }
 
-div#input-container {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 10px;
+#num-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
 }
 
-div#num-container {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-    width: 100%;
-    max-width: 980px;
+#symbol-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
 }
 
-div#num-container button {
-    flex-basis: calc(33.33333% - ((10px * 2) / 3));
+#action-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 16px;
 }
 
-div#num-container button:last-child {
-    flex-basis: 100%;
+#output {
+    background-color: rgb(20, 20, 20);
+    padding: 0 16px;
 }
 
-div#symbol-container {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 10px;
-}
-
-div#symbol-container button {
-    flex-basis: calc(25% - ((10px * 3) / 4));
-    width: 80px;
-}
-
-div.full-width-btn button {
-    width: 100%;
-    max-width: calc(980px + 10px + 80px);
-}
-
-button#equals {
+#equals {
     background-color: rgb(8, 87, 233);
-}
-
-button#equals:hover {
-    background-color: rgb(8, 87, 233, 80%);
-}
-
-button#clear {
-    background-color: black;
-}
-
-button#clear:hover {
-        background-color: rgba(12, 12, 12);
 }
