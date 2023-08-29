@@ -73,3 +73,9 @@ button:hover {
 #equals {
     background-color: rgb(8, 87, 233);
 }
+
+#result {
+    width: 14ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
