@@ -75,7 +75,7 @@ button:hover {
 }
 
 #result {
-    width: 14ch;
+    width: 18ch;
     overflow: hidden;
     text-overflow: ellipsis;
 }

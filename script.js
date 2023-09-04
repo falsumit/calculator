@@ -16,71 +16,150 @@ const add = document.getElementById('add');
 const equals = document.getElementById('equals');
 const clear = document.getElementById('clear');
 
-let input = [0];
-let answer;
+// let inputArray = [0];
+let a = '';
+let b = '';
+let answer = '';
 
 one.addEventListener('click', () => {
-    input.push(1);
-    result.innerHTML = 1;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(1);
 });
 
 two.addEventListener('click', () => {
-    input.push(2);
-    result.innerHTML = 2;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(2);
 });
 
 three.addEventListener('click', () => {
-    input.push(3);
-    result.innerHTML = 3;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(3);
 });
 
 four.addEventListener('click', () => {
-    input.push(4);
-    result.innerHTML = 4;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(4);
 });
 
 five.addEventListener('click', () => {
-    input.push(5);
-    result.innerHTML = 5;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(5);
 });
 
 six.addEventListener('click', () => {
-    input.push(6);
-    result.innerHTML = 6;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(6);
 });
 
 seven.addEventListener('click', () => {
-    input.push(7);
-    result.innerHTML = 7;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(7);
 });
 
 eight.addEventListener('click', () => {
-    input.push(8);
-    result.innerHTML = 8;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(8);
 });
 
 nine.addEventListener('click', () => {
-    input.push(9);
-    result.innerHTML = 9;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(9);
 });
 
 zero.addEventListener('click', () => {
-    input.push(0);
-    result.innerHTML = 0;
+    if (result.innerHTML == 0 ||
+        result.innerHTML == '+' ||
+        result.innerHTML == '-' ||
+        result.innerHTML == '*' ||
+        result.innerHTML == '/') {
+        result.innerHTML = '';
+    }
+    result.append(0);
 });
 
-
-
-
+add.addEventListener('click', () => {
+    a = result.innerHTML;
+    result.innerHTML = '+';
+});
 
 
 
 
 equals.addEventListener('click', () => {
-    result.innerHTML = input;
+    b = result.innerHTML;
+    answer = +a + +b;
+    result.innerHTML = answer;
+    a = answer;
+    b = '';
+    answer = '';
+    console.log(a);
+    console.log(b);
+    console.log(answer);
 });
 
+// equals.addEventListener('click', () => {
+//     input.splice(0, 1);
+//     let newResult = input.toString();
+//     result.innerHTML = newResult;
+// });
+
 clear.addEventListener('click', () => {
-    input = [0];
-    result.innerHTML = input;
+    result.innerHTML = '0';
+    a = '';
+    b = '';
+    answer = '';
 });
